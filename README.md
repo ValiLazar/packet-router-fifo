@@ -55,5 +55,5 @@ The simulation validates the switching logic and FIFO buffering. As seen below, 
 ![Simulation Waveform](Wave.png)
 
 **Key Observations:**
-* [cite_start]**Routing:** When the input address is `11` (binary), the payload is directed to `device3` [cite: 41-42].
-* [cite_start]**Flow Control:** The `ready_o` signal remains high as long as the FIFO is not full, allowing continuous data ingestion[cite: 43].
+* [cite_start]**Routing:** When the input address is `11` (binary), the payload is directed to `device3`.
+* [cite_start]**Flow Control:** The `ready_o` signal remains high as long as the FIFO is not full, allowing continuous data ingestion.
