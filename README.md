@@ -48,5 +48,12 @@ Below is the simulation result showing the distribution of packets to different 
 3.  Compile `fifo.sv`, `switch.sv`, and `tb_switch.sv`.
 4.  Run the simulation for 100ns+.
 
-## 📜 License
-MIT License
+# 📈 Simulation Waveform
+
+The simulation validates the switching logic and FIFO buffering. As seen below, the input data is correctly routed to the specific device based on the 2 MSB (Most Significant Bits) of the packet header.
+
+![Simulation Waveform](wave.png)
+
+**Key Observations:**
+* [cite_start]**Routing:** When the input address is `11` (binary), the payload is directed to `device3` [cite: 41-42].
+* [cite_start]**Flow Control:** The `ready_o` signal remains high as long as the FIFO is not full, allowing continuous data ingestion[cite: 43].
