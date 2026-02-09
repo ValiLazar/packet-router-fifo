@@ -52,7 +52,7 @@ Below is the simulation result showing the distribution of packets to different 
 
 The simulation validates the switching logic and FIFO buffering. As seen below, the input data is correctly routed to the specific device based on the 2 MSB (Most Significant Bits) of the packet header.
 
-![Simulation Waveform](wave.png)
+![Simulation Waveform](Wave.png)
 
 **Key Observations:**
 * [cite_start]**Routing:** When the input address is `11` (binary), the payload is directed to `device3` [cite: 41-42].
