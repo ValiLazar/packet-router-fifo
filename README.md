@@ -10,16 +10,16 @@ The design is written in **SystemVerilog** and is suitable for FPGA implementati
 The system consists of two main modules:
 
 1.  **FIFO Buffer (`fifo.sv`)**:
-    * [cite_start]Configurable depth (Default: 4 words) and width (Default: 8 bits)[cite: 1].
-    * [cite_start]Handles `full` and `empty` flags to prevent overflow/underflow[cite: 8, 10].
-    * [cite_start]Uses circular pointer logic for read/write operations[cite: 15, 18].
+    * Configurable depth (Default: 4 words) and width (Default: 8 bits).
+    * Handles `full` and `empty` flags to prevent overflow/underflow.
+    * Uses circular pointer logic for read/write operations.
 
 2.  **Switch Logic (`switch.sv`)**:
-    * [cite_start]Reads data from the FIFO when valid data is available and the destination is ready[cite: 29].
+    * Reads data from the FIFO when valid data is available and the destination is ready.
     * **Packet Structure**: The 8-bit input data is split into:
-        * [cite_start]**Header (2 MSB)**: Address bits `[7:6]` used to select the output device (0-3)[cite: 31].
-        * [cite_start]**Payload (6 LSB)**: The actual data bits `[5:0]` sent to the device[cite: 32].
-    * [cite_start]**Routing**: Routes the payload to `device0`, `device1`, `device2`, or `device3` based on the header [cite: 37-42].
+        * **Header (2 MSB)**: Address bits `[7:6]` used to select the output device (0-3).
+        * **Payload (6 LSB)**: The actual data bits `[5:0]` sent to the device.
+    * **Routing**: Routes the payload to `device0`, `device1`, `device2`, or `device3` based on the header.
 
 ## 📊 Simulation Results
 
